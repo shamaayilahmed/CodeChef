@@ -1,0 +1,50 @@
+1.Big O notation:
+      From the time growth of a function(f(n)) is upper bound by another function(cg(n)), such that 
+          f(n)<=cg(n) at some point n' where n>=n'   c>0,n'>=1
+            such that f(n)=O(g(n))
+            
+2.Big omega notation:
+      From the time growth of a function(f(n)) is lower bound by another function(cg(n)), such that 
+          f(n)>=cg(n) at some point n' where n>=n'   c>0,n'>=1
+            such that f(n)=omega(g(n))
+            
+3.Big theta notation:
+      From the time growth of a function(f(n)) is upper bound and lower bound by another function(cg(n)), such that 
+          f(n)<=cg(n) at some point n' where n>=n'   c>0,n'>=1
+            such that f(n)=theta(g(n))
+            
+            
+To summarize:
+  big O : Worst case time(always prefered)
+  big omega: Best case time
+  big theta : Average case(when big O and big Omega are the same)
+  
+  
+  
+Big O notations with code snippets:
+  O(1)  
+      alogorithm that executes in same time(or space) regardless of size of input.
+          bool IsFirstNegative(List<int> Numbers){
+            return Numbers[0[<0;
+          }
+          
+  O(N)
+      algorithm will grow linearly as the size of array increases.
+          any_of(arr,arr+6,[](int x){return x<0;})?cout<<"Negative is present:cout<<"All positive";
+          
+  O(N^2)
+      algorithm whose performance is proportional to the square of size of input.
+          bubble sort algorithm(will be explained)
+          
+  O(2^N)
+      growth doubles for each addition of input.
+      fibonacci series
+        int fib(int n){
+          if(n<=1)
+            return n;
+          return fib(n-1)+fib(n-2);
+        }
+     
+  Logarithmic
+       The increase of input data set has less effect on performance. As in binary search
+        O(log N)
