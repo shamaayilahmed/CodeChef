@@ -1,0 +1,58 @@
+SEARCHING
+    Linear Search
+    
+      void Linear(int array[],int size,int item){
+          for(int i=0;i<size-1;i++){
+            if(array[i]==item){
+                flag=true;
+                }
+            }
+           if(flag) cout<<"Found";
+           else cout<<"Not found";
+           
+           
+    Binary search
+    
+      void Binary(int array[],int size,int item){
+          int low=0,high=n-1;
+          while(low<=high){
+            int mid=(high+low)/2;
+            if(array[mid]==item) return mid;
+            else if(array[mid]<item) low=mid+1;
+            else high=mid-1;
+          }
+          return -1;
+       }
+       
+SORTING 
+    Bubble Sort
+    
+      void Bubble(int arra[],int size){
+          for(int i=0;i<size-1;i++){
+            for(int j=0;j<size-1;j++){
+              if(array[j]>array[j+1])  swap(array[j],array[j+1]);
+            }
+          }
+      }
+      
+      
+    Quick Sort
+    
+      void Partition(int array[],int start,int end){
+        int pivotValue=array[start] , pivotIndex=start;
+          for(int i=start+1;i<=end;i++){
+            if(array[i]<pivotValue){
+              swap(array[pivotIndex+1],array[i]);
+              swap(array[pivotIndex],array[pivotIndex+1]);
+              pivotIndex++;
+            }
+          }
+          return pivotIndex;
+       }
+      void Quick(int array[],int low,int high){
+        if(low<high){
+          int partitionIndex=Partition(array[],low,high);
+          Quick(array[],low,partitionIndex-1);
+          Quick(array[],partitionIndex+1,high);
+        }
+      }
